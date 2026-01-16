@@ -8,6 +8,6 @@ workflows:
       - name: Build APK
         script: |
           chmod +x gradlew
-          ./gradlew :app:assembleDebug
+          ./gradlew --no-daemon clean :app:assembleDebug
     artifacts:
-      - app/build/outputs/apk/debug/*.apk
+      - app/build/outputs/**/*.apk
